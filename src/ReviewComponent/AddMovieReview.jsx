@@ -29,7 +29,7 @@ const AddMovieReview = () => {
       setUserId(user.id);
       let data = { userId, movieId, star, review };
 
-      fetch("http://localhost:8080/api/movie/review/add", {
+      fetch("http://movie-magic-backend-server-production.up.railway.app/api/movie/review/add", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -92,7 +92,7 @@ const AddMovieReview = () => {
         <div class="col-sm-3 mt-2">
           <div class="card form-card border-color custom-bg">
             <img
-              src={"http://localhost:8080/api/theatre/" + movie.posterImage}
+              src={"http://movie-magic-backend-server-production.up.railway.app/api/theatre/" + movie.posterImage}
               className="d-block card-img-top img-fluid"
               alt="poster_img"
               style={{

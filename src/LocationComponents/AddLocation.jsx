@@ -58,7 +58,7 @@ const AddLocation = ({ onSubmit }) => {
       longitude: selectedLocation.lng,
     };
 
-    fetch("http://localhost:8080/api/location/add", {
+    fetch("http://movie-magic-backend-server-production.up.railway.app/api/location/add", {
       method: "POST",
       headers: {
         Accept: "application/json",

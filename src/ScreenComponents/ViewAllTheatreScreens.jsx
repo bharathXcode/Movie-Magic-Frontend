@@ -31,7 +31,7 @@ const ViewAllTheatreScreens = () => {
 
   const retrieveScreen = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/theatre/screen/fetch/status-wise?status=Active",
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/screen/fetch/status-wise?status=Active",
       {
         headers: {
           Authorization: "Bearer " + admin_jwtToken,
@@ -54,7 +54,7 @@ const ViewAllTheatreScreens = () => {
 
   const deleteScreen = (screenId, e) => {
     fetch(
-      "http://localhost:8080/api/theatre/screen/delete?screenId=" + screenId,
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/screen/delete?screenId=" + screenId,
       {
         method: "DELETE",
         headers: {

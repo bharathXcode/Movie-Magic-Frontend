@@ -43,22 +43,23 @@ const HomePage = () => {
   }, [locationId]);
 
   const retrieveAllLocation = async () => {
-    const response = await axios.get(
-      "http://localhost:8080/api/location/fetch/all"
+    const response = await axios.get( 
+      //  "http://localhost:8080/api/location/fetch/all"
+       "http://movie-magic-backend-server-production.up.railway.app/api/location/fetch/all"
     );
     return response.data;
   };
 
   const retrieveTheatres = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/theatre/fetch/status-wise?status=Active"
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/fetch/status-wise?status=Active"
     );
     return response.data;
   };
 
   const retrieveTheatresByLocation = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/theatre/fetch/location-wise?locationId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/fetch/location-wise?locationId=" +
         locationId
     );
     return response.data;

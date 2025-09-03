@@ -30,7 +30,7 @@ const ViewTheatreMovies = () => {
 
   const retrieveMovies = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/movie/fetch/theatre-wise?theatreId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/movie/fetch/theatre-wise?theatreId=" +
         theatreManager.theatre.id,
       {
         headers: {
@@ -52,7 +52,7 @@ const ViewTheatreMovies = () => {
   };
 
   const deleteMovie = (movieId, e) => {
-    fetch("http://localhost:8080/api/movie/delete?movieId=" + movieId, {
+    fetch("http://movie-magic-backend-server-production.up.railway.app/api/movie/delete?movieId=" + movieId, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -157,7 +157,7 @@ const ViewTheatreMovies = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/theatre/" +
+                            "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" +
                             movie.posterImage
                           }
                           class="img-fluid"

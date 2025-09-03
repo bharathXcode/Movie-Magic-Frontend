@@ -33,7 +33,7 @@ const TheatreBookings = () => {
 
   const retrieveBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/show/booking/fetch/theatre-wise?theatreId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/show/booking/fetch/theatre-wise?theatreId=" +
         theatreManager?.theatre?.id +
         "&status=Booked",
       {
@@ -98,7 +98,7 @@ const TheatreBookings = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/theatre/" +
+                            "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" +
                             booking?.show?.movie?.posterImage
                           }
                           class="img-fluid"

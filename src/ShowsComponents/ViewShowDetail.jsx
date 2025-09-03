@@ -66,7 +66,7 @@ const ViewShowDetail = () => {
 
   const retrieveBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/show/booking/fetch/show-wise?showId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/show/booking/fetch/show-wise?showId=" +
         show.id,
       {
         headers: {
@@ -112,7 +112,7 @@ const ViewShowDetail = () => {
       bookingIds: bookingIds,
     };
 
-    fetch("http://localhost:8080/api/show/booking/add", {
+    fetch("http://movie-magic-backend-server-production.up.railway.app/api/show/booking/add", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -298,7 +298,7 @@ const ViewShowDetail = () => {
         <div className="col-md-4 text-center mb-3">
           <img
             src={
-              "http://localhost:8080/api/theatre/" + show?.movie?.posterImage
+              "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" + show?.movie?.posterImage
             }
             className="d-block card-img-top img-fluid"
             alt="poster_img"
@@ -368,7 +368,7 @@ const ViewShowDetail = () => {
         <div className="col-md-4 text-center mb-3">
           <img
             src={
-              "http://localhost:8080/api/theatre/" + show?.movie?.theatre?.image
+              "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" + show?.movie?.theatre?.image
             }
             className="d-block card-img-top img-fluid"
             alt="poster_img"

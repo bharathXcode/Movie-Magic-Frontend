@@ -24,7 +24,7 @@ const ViewAllLocations = () => {
 
   const retrieveAllLocation = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/location/fetch/all"
+      "http://movie-magic-backend-server-production.up.railway.app/api/location/fetch/all"
     );
     console.log(response.data);
     return response.data;
@@ -32,7 +32,7 @@ const ViewAllLocations = () => {
 
   const deleteLocation = (locationId, e) => {
     fetch(
-      "http://localhost:8080/api/location/delete?locationId=" + locationId,
+      "http://movie-magic-backend-server-production.up.railway.app/api/location/delete?locationId=" + locationId,
       {
         method: "DELETE",
         headers: {

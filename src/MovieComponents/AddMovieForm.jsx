@@ -51,7 +51,7 @@ const AddMovieForm = () => {
     formData.append("trailerUrl", movie.trailerUrl);
 
     axios
-      .post("http://localhost:8080/api/movie/add", formData, {
+      .post("http://movie-magic-backend-server-production.up.railway.app/api/movie/add", formData, {
         headers: {
           Authorization: "Bearer " + theatre_jwtToken,
         },

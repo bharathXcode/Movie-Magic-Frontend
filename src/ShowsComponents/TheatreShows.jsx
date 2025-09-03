@@ -53,7 +53,7 @@ const TheatreShows = () => {
 
   const retrieveTheatreById = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/theatre/fetch/id-wise?theatreId=" + theatreId,
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/fetch/id-wise?theatreId=" + theatreId,
       {
         headers: {
           //      Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
@@ -65,14 +65,14 @@ const TheatreShows = () => {
 
   const retrieveTheatreShows = async () => {
     const response = await axios.get(
-      `http://localhost:8080/api/theatre/show/fetch/theatre-wise/upcoming?theatreId=${theatreId}`
+      `http://movie-magic-backend-server-production.up.railway.app/api/theatre/show/fetch/theatre-wise/upcoming?theatreId=${theatreId}`
     );
     return response.data;
   };
 
   const retrieveTheatreShowsByShowName = async () => {
     const response = await axios.get(
-      `http://localhost:8080/api/theatre/show/fetch/showname-wise/upcoming?theatreId=${theatreId}&showName=${showName}`
+      `http://movie-magic-backend-server-production.up.railway.app/api/theatre/show/fetch/showname-wise/upcoming?theatreId=${theatreId}&showName=${showName}`
     );
     return response.data;
   };
@@ -95,7 +95,7 @@ const TheatreShows = () => {
             {/* Image on the left side */}
             <div className="col-md-4 d-flex justify-content-center">
               <img
-                src={"http://localhost:8080/api/theatre/" + theatre.image}
+                src={"http://movie-magic-backend-server-production.up.railway.app/api/theatre/" + theatre.image}
                 className="img-fluid rounded"
                 alt={theatre.name}
                 style={{

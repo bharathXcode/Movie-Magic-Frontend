@@ -34,7 +34,7 @@ const ShowCard = ({ item }) => {
             }}
           >
             <img
-              src={`http://localhost:8080/api/theatre/${item?.movie?.posterImage}`}
+              src={`http://movie-magic-backend-server-production.up.railway.app/api/theatre/${item?.movie?.posterImage}`}
               alt="img"
               style={{
                 maxHeight: "100%",

@@ -30,7 +30,7 @@ const AddScreenForm = () => {
   const saveScreen = (e) => {
     e.preventDefault();
     screen.theatreId = theatreManager.theatre.id;
-    fetch("http://localhost:8080/api/theatre/screen/add", {
+    fetch("http://movie-magic-backend-server-production.up.railway.app/api/theatre/screen/add", {
       method: "POST",
       headers: {
         Accept: "application/json",

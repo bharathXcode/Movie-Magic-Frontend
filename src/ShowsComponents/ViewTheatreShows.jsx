@@ -39,7 +39,7 @@ const ViewTheatreShows = () => {
 
   const retriveShows = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/theatre/show/fetch/theatre-wise?theatreId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/show/fetch/theatre-wise?theatreId=" +
         theatreManager.theatre.id,
       {
         headers: {
@@ -56,7 +56,7 @@ const ViewTheatreShows = () => {
 
   const updateShow = (showId, status) => {
     fetch(
-      "http://localhost:8080/api/theatre/show/update/status?showId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/show/update/status?showId=" +
         showId +
         "&status=" +
         status,
@@ -173,7 +173,7 @@ const ViewTheatreShows = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/theatre/" +
+                            "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" +
                             show?.movie?.posterImage
                           }
                           class="img-fluid"

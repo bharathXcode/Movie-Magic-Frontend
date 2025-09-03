@@ -17,7 +17,7 @@ const AddTheatreForm = () => {
 
   const retrieveAllLocations = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/location/fetch/all"
+      "http://movie-magic-backend-server-production.up.railway.app/api/location/fetch/all"
     );
     return response.data;
   };
@@ -75,7 +75,7 @@ const AddTheatreForm = () => {
     formData.append("description", theatre.description);
 
     axios
-      .post("http://localhost:8080/api/theatre/add", formData, {
+      .post("http://movie-magic-backend-server-production.up.railway.app/api/theatre/add", formData, {
         headers: {
           Authorization: "Bearer " + theatre_jwtToken,
         },

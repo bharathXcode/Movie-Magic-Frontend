@@ -33,7 +33,7 @@ const AllTheatreBookings = () => {
 
   const retrieveBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/show/booking/fetch?status=Booked",
+      "http://movie-magic-backend-server-production.up.railway.app/api/show/booking/fetch?status=Booked",
       {
         headers: {
           Authorization: "Bearer " + admin_jwtToken,
@@ -96,7 +96,7 @@ const AllTheatreBookings = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/theatre/" +
+                            "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" +
                             booking?.show?.movie?.posterImage
                           }
                           class="img-fluid"

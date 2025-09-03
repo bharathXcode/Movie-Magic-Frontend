@@ -36,7 +36,7 @@ const CustomerBookings = () => {
 
   const retrieveBookings = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/show/booking/fetch/customer-wise?customerId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/show/booking/fetch/customer-wise?customerId=" +
         customer.id +
         "&status=Booked",
       {
@@ -101,7 +101,7 @@ const CustomerBookings = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/theatre/" +
+                            "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" +
                             booking?.show?.movie?.posterImage
                           }
                           class="img-fluid"

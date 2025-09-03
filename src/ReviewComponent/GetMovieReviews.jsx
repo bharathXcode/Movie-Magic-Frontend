@@ -13,7 +13,7 @@ const GetMovieReviews = ({ movie }) => {
 
   const retrieveAllReviews = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/movie/review/fetch?movieId=" + movie?.id
+      "http://movie-magic-backend-server-production.up.railway.app/api/movie/review/fetch?movieId=" + movie?.id
     );
     return response.data;
   };

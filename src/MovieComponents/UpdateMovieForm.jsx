@@ -38,7 +38,7 @@ const UpdateMovieForm = () => {
   const saveMovie = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8080/api/movie/update/detail", {
+    fetch("http://movie-magic-backend-server-production.up.railway.app/api/movie/update/detail", {
       method: "PUT",
       headers: {
         Accept: "application/json",

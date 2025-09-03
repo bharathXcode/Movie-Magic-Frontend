@@ -39,7 +39,7 @@ const ViewAllTheatreShows = () => {
 
   const retriveShows = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/theatre/show/fetch/all",
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/show/fetch/all",
       {
         headers: {
           Authorization: "Bearer " + admin_jwtToken,
@@ -55,7 +55,7 @@ const ViewAllTheatreShows = () => {
 
   const updateShow = (showId, status) => {
     fetch(
-      "http://localhost:8080/api/theatre/show/update/status?showId=" +
+      "http://movie-magic-backend-server-production.up.railway.app/api/theatre/show/update/status?showId=" +
         showId +
         "&status=" +
         status,
@@ -173,7 +173,7 @@ const ViewAllTheatreShows = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/theatre/" +
+                            "http://movie-magic-backend-server-production.up.railway.app/api/theatre/" +
                             show?.movie?.posterImage
                           }
                           class="img-fluid"
